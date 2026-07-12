@@ -3,10 +3,9 @@ class Solution:
         a = list(set(arr))
         a.sort()
         d = {val:rnk+1 for rnk,val in enumerate(a)}
-        ans = []
-        for i in arr:
-            ans.append(d[i])
-        return ans
+        
+        return [d[i] for i in arr]
+        
         
         
                 
