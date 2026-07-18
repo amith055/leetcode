@@ -5,9 +5,11 @@ class Solution:
         count = 0
         j=0
         for i in range(min(len(g),len(s))):
-            while j<len(s) and s[j]<g[i] :
+            while s[j]<g[i] :
                 j+=1
-            if j<len(s) and s[j]>=g[i]:
+                if j==len(s): return count
+            if s[j]>=g[i]:
                 count+=1
                 j+=1
+                if j==len(s): return count
         return count
